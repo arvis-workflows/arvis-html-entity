@@ -1,0 +1,39 @@
+{
+  "name": "arvis-html-entity-encoder",
+  "version": "0.0.2",
+  "description": "Convert string to html entity",
+  "main": "index.js",
+  "author": {
+    "name": "ryou",
+    "email": "sdmilieu@gmail.com",
+    "url": "https://www.sd-milieu.net/"
+  },
+  "scripts": {
+    "postinstall": "arvish-init",
+    "preuninstall": "arvish-cleanup",
+    "prepublishOnly": "arvish-prepublish"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "arvish": ">=0.6.1",
+    "html-entities": "^1.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.2.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^3.0.4",
+    "lint-staged": "^9.2.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint"
+  }
+}

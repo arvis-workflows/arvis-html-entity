@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jopemachine/arvis-extension-validator/master/workflow-schema.json",
+  "defaultIcon": "icon.png",
+  "category": "Productivity",
+  "creator": "ryou",
+  "version": "0.0.2",
+  "description": "Convert string to html entity",
+  "name": "html-entity-encoder",
+  "readme": "",
+  "webAddress": "https://sd-milieu.net/",
+  "enabled": true,
+  "commands": [
+    {
+      "type": "scriptFilter",
+      "title": "Convert string to html entity",
+      "command": "hee",
+      "subtitle": "",
+      "scriptFilter": "node index.js \"{query}\"",
+      "runningSubtext": "",
+      "withspace": true,
+      "argType": "required",
+      "actions": [
+        {
+          "modifiers": "normal",
+          "type": "clipboard",
+          "text": "{query}"
+        }
+      ]
+    }
+  ]
+}
