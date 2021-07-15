@@ -1,16 +1,22 @@
-const arvish = require('arvish')
-const Entities = require('html-entities').AllHtmlEntities
+const alfy = require('alfy')
+const entities = require('entities')
 
-const entities = new Entities()
+const input = alfy.input
 
-const main = async () => {
-  const encodedString = entities.encode(arvish.input)
+if (input) {
+  const encoded = entities.encodeHTML(input)
+  const decoded = entities.decodeHTML(input)
 
-  arvish.output([{
-    title: encodedString,
-    subtitle: 'Copy to clipboard.',
-    arg: encodedString
-  }])
+  alfy.output([
+    {
+      title: encoded,
+      subtitle: 'encode result',
+      arg: encoded
+    },
+    {
+      title: decoded,
+      subtitle: 'decode result',
+      arg: decoded
+    }
+  ])
 }
-
-main()

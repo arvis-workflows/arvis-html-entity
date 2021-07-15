@@ -1,7 +1,7 @@
 {
-  "name": "arvis-html-entity-encoder",
-  "version": "0.0.2",
-  "description": "Convert string to html entity",
+  "name": "arvis-html-entity",
+  "version": "0.0.1",
+  "description": "Decode and Encode HTML entity",
   "main": "index.js",
   "author": {
     "name": "ryou",
@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "arvish": ">=0.6.1",
-    "html-entities": "^1.2.1"
+    "entities": "^1.1.1"
   },
   "devDependencies": {
     "eslint": "^6.3.0",
