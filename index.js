@@ -1,13 +1,13 @@
-const alfy = require('alfy')
+const arvish = require('arvish')
 const entities = require('entities')
 
-const input = alfy.input
+const input = arvish.input
 
 if (input) {
   const encoded = entities.encodeHTML(input)
   const decoded = entities.decodeHTML(input)
 
-  alfy.output([
+  arvish.output([
     {
       title: encoded,
       subtitle: 'encode result',
